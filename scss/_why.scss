@@ -1,0 +1,36 @@
+.why {
+	margin-bottom: 100px;
+	background-color: rgba(255, 255, 255, 1);
+	&__title {
+		text-align: center;
+		font-weight: 700;
+		font-size: 60px;
+		line-height: 70px;
+		color: #8d3500;
+		margin-bottom: 40px;
+	}
+	&__text {
+		font-weight: 300;
+		font-size: 26px;
+		line-height: 32px;
+		text-align: center;
+		color: $color-black;
+	}
+}
+.why-items {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	margin-bottom: 40px;
+	&__item {
+		// border: 3px solid red;
+		flex: 1;
+		padding-right: 20px;
+		&:last-child {
+			padding-right: 0px;
+		}
+		&:last-child {
+			text-align: end;
+		}
+	}
+}

@@ -1,0 +1,45 @@
+.footer {
+	background-color: rgba(86, 32, 0, 1);
+	padding: 25px 0;
+}
+.container {
+}
+.footer-items {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	&__item {
+		max-width: 250px;
+		color: $color-white;
+		text-align: center;
+		// display: flex;
+		& img,
+		& span,
+		& div,
+		& h5 {
+			margin-bottom: 10px;
+		}
+		& span {
+			display: block;
+		}
+		& h6 {
+			margin-bottom: 30px;
+			font-weight: 300;
+			font-size: 20px;
+			line-height: 24px;
+		}
+		& a {
+			cursor: pointer;
+			color: $color-white;
+			margin-right: 10px;
+			font-weight: 300;
+			font-size: 20px;
+			line-height: 24px;
+		}
+		& h5 {
+			font-weight: 300;
+			font-size: 26px;
+			line-height: 32px;
+		}
+	}
+}
