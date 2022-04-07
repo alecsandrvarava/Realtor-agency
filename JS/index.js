@@ -1,4 +1,3 @@
-// const hidden = document.querySelectorAll(".hidden")
 const menuBurger = document.querySelector('.menu__burger')
 const headerMenu = document.querySelector('.header-menu__list')
 const wrapper = document.querySelector('.wrapper')
