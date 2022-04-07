@@ -1,3 +1,4 @@
+// const hidden = document.querySelectorAll(".hidden")
 const menuBurger = document.querySelector('.menu__burger')
 const headerMenu = document.querySelector('.header-menu__list')
 const wrapper = document.querySelector('.wrapper')
@@ -13,11 +14,18 @@ menuBurger.onclick = function () {
 		console.log('!')
 		this.classList.add('animation')
 		headerMenu.classList.remove('opacity')
+		setTimeout(() => {
+			headerMenu.classList.remove('hidden')
+		}, 200)
 		wrapper.classList.add('stop')
 	} else {
 		console.log('!!')
 		this.classList.remove('animation')
 		headerMenu.classList.add('opacity')
+		setTimeout(() => {
+			headerMenu.classList.add('hidden')
+		}, 200)
+		// headerMenu.classList.add('hidden')
 		wrapper.classList.remove('stop')
 	}
 }
