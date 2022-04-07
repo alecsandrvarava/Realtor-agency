@@ -5,6 +5,7 @@ const wrapper = document.querySelector('.wrapper')
 
 if (screen.width < 991) {
 	headerMenu.classList.add('opacity')
+	headerMenu.classList.add('hidden')
 } else {
 	headerMenu.classList.remove('opacity')
 }
