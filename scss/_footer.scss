@@ -1,6 +1,10 @@
 .footer {
 	background-color: rgba(86, 32, 0, 1);
 	padding: 25px 0;
+	@media (max-width: 767px) {
+		padding: 15px 0;
+		margin-bottom: 15px;
+	}
 }
 .container {
 }
@@ -8,10 +12,18 @@
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
+	@media (max-width: 767px) {
+		flex-wrap: wrap;
+		justify-content: center;
+		margin: 0 -15px;
+	}
 	&__item {
 		max-width: 250px;
 		color: $color-white;
 		text-align: center;
+		@media (max-width: 767px) {
+			padding: 0 15px;
+		}
 		// display: flex;
 		& img,
 		& span,
@@ -32,6 +44,7 @@
 			}
 			@media (max-width: 767px) {
 				font-size: 12px;
+				margin-bottom: 0px;
 			}
 		}
 		& a {
@@ -59,5 +72,16 @@
 				font-size: 12px;
 			}
 		}
+	}
+}
+.mb {
+	margin-bottom: 30px;
+	@media (max-width: 767px) {
+		margin: 0px;
+	}
+}
+.whatsapp {
+	@media (max-width: 767px) {
+		display: none;
 	}
 }
