@@ -21,6 +21,7 @@
 		max-width: 250px;
 		color: $color-white;
 		text-align: center;
+
 		@media (max-width: 767px) {
 			padding: 0 15px;
 		}
@@ -30,9 +31,13 @@
 		& div,
 		& h5 {
 			margin-bottom: 10px;
+			transition: 0.2s;
 		}
 		& span {
 			display: block;
+		}
+		& div img:hover {
+			transform: scale(1.1);
 		}
 		& h6 {
 			margin-bottom: 30px;
@@ -59,6 +64,9 @@
 			}
 			@media (max-width: 767px) {
 				font-size: 12px;
+			}
+			&:hover {
+				text-decoration: underline;
 			}
 		}
 		& h5 {

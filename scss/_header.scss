@@ -252,6 +252,10 @@
 			transition: 1.2s;
 			background: linear-gradient(90deg, #b1653a 0%, #a18c5c 148.54%);
 		}
+		&:active {
+			background: linear-gradient(90deg, #eb9562 0%, #e0cfa7 148.54%);
+		}
+
 		@media (max-width: 992px) {
 			margin-bottom: 60px;
 		}

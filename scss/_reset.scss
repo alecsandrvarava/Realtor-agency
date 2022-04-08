@@ -37,6 +37,10 @@ body {
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
+body.lock {
+	overflow: hidden;
+	padding-right: 17px;
+}
 input,
 button,
 textarea {
@@ -76,10 +80,6 @@ h6 {
 }
 .wrapper {
 	min-height: 100%;
-	overflow: hidden;
-}
-.stop {
-	height: 100%;
 	overflow: hidden;
 }
 .container {
