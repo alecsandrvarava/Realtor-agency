@@ -1380,8 +1380,8 @@ iframe {
   left: 0;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: 0.4s;
-  transition: 0.4s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .popup__area {
@@ -1395,6 +1395,26 @@ iframe {
 .popup.open {
   opacity: 1;
   visibility: visible;
+}
+
+.popup__close {
+  font-size: 24px;
+  color: #000000;
+  -webkit-transition: 0.1s;
+  transition: 0.1s;
+  padding: 10px;
+}
+
+.popup__close:hover {
+  -webkit-transform: scale(0.9);
+          transform: scale(0.9);
+  font-weight: 700;
+}
+
+.popup__close:active {
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  font-weight: 700;
 }
 
 .popup__body {

@@ -19,6 +19,20 @@
 		opacity: 1;
 		visibility: visible;
 	}
+	&__close {
+		font-size: 24px;
+		color: $color-black;
+		transition: 0.1s;
+		padding: 10px;
+		&:hover {
+			transform: scale(0.9);
+			font-weight: 700;
+		}
+		&:active {
+			transform: scale(1);
+			font-weight: 700;
+		}
+	}
 	&__body {
 		min-height: 100%;
 		display: flex;
