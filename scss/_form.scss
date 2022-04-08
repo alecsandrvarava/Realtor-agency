@@ -1,46 +1,106 @@
 .form {
 	margin-bottom: 80px;
+	@media (max-width: 992px) {
+		margin-bottom: 60px;
+	}
+	@media (max-width: 768px) {
+		margin-bottom: 30px;
+	}
 }
 .form-items {
 	background-color: rgba(255, 255, 255, 1);
-
 	display: flex;
 	flex-wrap: wrap;
 	margin: 0 -20px;
+	margin-bottom: 80px;
+	@media (max-width: 992px) {
+		margin-bottom: 30px;
+		align-items: center;
+	}
+	@media (max-width: 767px) {
+		flex-direction: column;
+		margin-bottom: 20px;
+		margin: 0px;
+		align-items: stretch;
+	}
 	&__item {
 		flex: 1 1 50%;
 		padding: 0 20px;
 		margin-bottom: 20px;
+		@media (max-width: 992px) {
+		}
+		@media (max-width: 767px) {
+			flex: 1 1 100%;
+			margin-bottom: 20px;
+			padding: 0px;
+		}
 		& p {
 			font-weight: 300;
 			font-size: 26px;
 			line-height: 32px;
 			color: $color-black;
 			width: 70%;
+			margin-bottom: 80px;
+			@media (max-width: 992px) {
+				font-size: 18px;
+				line-height: 22px;
+				margin-bottom: 0px;
+				width: 100%;
+			}
+			@media (max-width: 767px) {
+				width: 100%;
+				text-align: center;
+				font-size: 14px;
+				line-height: 22px;
+				margin-bottom: 0px;
+			}
 		}
 		& h3 {
-			font-weight: 700;
+			font-weight: 500;
 			font-size: 48px;
 			line-height: 58px;
 			color: $color-black;
 			margin-bottom: 30px;
+			@media (max-width: 992px) {
+				font-size: 40px;
+				line-height: 50px;
+				margin-bottom: 20px;
+			}
+			@media (max-width: 767px) {
+				text-align: center;
+				font-size: 28px;
+				line-height: 32px;
+			}
 		}
 	}
 	.item__input {
 		max-width: 550px;
 		border: 1px solid rgba(0, 0, 0, 0.4);
 		margin-bottom: 10px;
+		@media (max-width: 992px) {
+		}
+		@media (max-width: 768px) {
+			max-width: 100%;
+		}
 		& input {
-			font-weight: 300;
+			font-weight: 400;
 			font-size: 21px;
 			line-height: 26px;
 			width: 100%;
 			padding: 10px 10px;
-			color: rgba(0, 0, 0, 0.4);
+			color: $color-black;
+			@media (max-width: 768px) {
+				padding: 5px 5px;
+				font-size: 16px;
+			}
 			&::placeholder {
 				color: rgba(0, 0, 0, 0.4);
 				font-weight: 300;
 				font-size: 21px;
+				@media (max-width: 768px) {
+					font-size: 14px;
+					line-height: 22px;
+				}
 			}
 		}
 	}
@@ -61,3 +121,14 @@
 		}
 	}
 }
+// .item {
+// 	@media (max-width: 992px) {
+// 		display: flex;
+// 		align-items: center;
+// 		flex-direction: column;
+// 		justify-content: center;
+// 	}
+// 	@media (max-width: 768px) {
+// 		// max-width: 100%;
+// 	}
+// }

@@ -1,5 +1,11 @@
 .map {
 	margin-bottom: 100px;
+	@media (max-width: 992px) {
+		margin-bottom: 60px;
+	}
+	@media (max-width: 768px) {
+		margin-bottom: 40px;
+	}
 	&__title {
 		text-align: center;
 		font-weight: 700;
@@ -7,6 +13,16 @@
 		line-height: 70px;
 		color: #8d3500;
 		margin-bottom: 40px;
+		@media (max-width: 992px) {
+			font-size: 40px;
+			line-height: 50px;
+			margin-bottom: 30px;
+		}
+
+		@media (max-width: 768px) {
+			font-size: 28px;
+			line-height: 22px;
+		}
 	}
 
 	&__text {
@@ -15,8 +31,22 @@
 		line-height: 32px;
 		text-align: center;
 		color: $color-black;
+		@media (max-width: 992px) {
+			font-size: 18px;
+			line-height: 22px;
+			font-weight: 500;
+			color: rgba(141, 53, 0, 1);
+		}
+		@media (max-width: 768px) {
+			font-size: 14px;
+			line-height: 22px;
+		}
 	}
 }
 iframe {
 	margin-bottom: 30px;
+	@media (max-width: 768px) {
+		height: 200px;
+		margin-bottom: 15px;
+	}
 }
