@@ -42,9 +42,13 @@ body {
   -webkit-text-size-adjust: 100%;
 }
 
-body.lock {
+body.lock-padding {
   overflow: hidden;
   padding-right: 17px;
+}
+
+body.lock {
+  overflow: hidden;
 }
 
 input,
@@ -1433,15 +1437,6 @@ iframe {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 30px;
-}
-
-@media (max-width: 767px) {
-  .popup__body {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
-    margin-top: 100px;
-  }
 }
 
 .popup__content {

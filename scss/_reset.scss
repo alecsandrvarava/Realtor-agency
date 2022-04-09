@@ -37,9 +37,12 @@ body {
 	-moz-text-size-adjust: 100%;
 	-webkit-text-size-adjust: 100%;
 }
-body.lock {
+body.lock-padding {
 	overflow: hidden;
 	padding-right: 17px;
+}
+body.lock {
+	overflow: hidden;
 }
 input,
 button,
