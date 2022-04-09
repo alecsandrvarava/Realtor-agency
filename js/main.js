@@ -4,10 +4,9 @@ const headerMenu = document.querySelector('.header-menu__list')
 const [popupLink] = document.querySelectorAll(".popup__link")
 const [popupClose] = document.querySelectorAll(".popup__close")
 const [popupArea] = document.querySelectorAll(".popup__area")
-const [formSubmission] = document.querySelectorAll(".form__submission")
 const popup = document.querySelector('.popup')
 const body = document.querySelector('body')
-
+const formSubmission = document.getElementById('formSubmission')
 if (screen.width < 991) {
 	headerMenu.classList.add('opacity')
 	headerMenu.classList.add('hidden')
@@ -39,7 +38,7 @@ popupLink.onclick = function () {
 	popup.classList.add('open')
 	setTimeout(() => {
 		body.classList.remove('lock-padding')
-	}, 300)
+	}, 200)
 	menuBurger.classList.remove('animation')
 	headerMenu.classList.add('opacity')
 	setTimeout(() => {
@@ -51,7 +50,7 @@ popupClose.onclick = function () {
 	popup.classList.remove('open')
 	setTimeout(() => {
 		body.classList.remove('lock-padding')
-	}, 300)
+	}, 200)
 	if (screen.width > 991) {
 		headerMenu.classList.remove('opacity')
 		setTimeout(() => {
@@ -62,7 +61,7 @@ popupClose.onclick = function () {
 popupArea.onclick = function () {
 	setTimeout(() => {
 		body.classList.remove('lock-padding')
-	}, 300)
+	}, 200)
 	popup.classList.remove('open')
 	if (screen.width > 991) {
 		headerMenu.classList.remove('opacity')
@@ -72,9 +71,15 @@ popupArea.onclick = function () {
 	}
 
 }
-// formSubmission.onclick = function () {
-// 	popup.classList.remove('open')
-// 	setTimeout(() => {
-// 		body.classList.remove('lock')
-// 	}, 300)
-// }
+formSubmission.onclick = function () {
+	popup.classList.remove('open')
+	setTimeout(() => {
+		body.classList.remove('lock')
+	}, 300)
+	if (screen.width > 991) {
+		headerMenu.classList.remove('opacity')
+		setTimeout(() => {
+			headerMenu.classList.remove('hidden')
+		}, 200)
+	}
+}
