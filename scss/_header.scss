@@ -331,6 +331,9 @@
 }
 .opacity {
 	opacity: 0;
+	// @media (max-width: 992px) {
+	// 	opacity: 1;
+	// }
 }
 
 @media (max-width: 992px) {

@@ -37,7 +37,9 @@ menuBurger.onclick = function () {
 
 popupLink.onclick = function () {
 	popup.classList.add('open')
-	body.classList.add('lock-padding')
+	setTimeout(() => {
+		body.classList.remove('lock-padding')
+	}, 300)
 	menuBurger.classList.remove('animation')
 	headerMenu.classList.add('opacity')
 	setTimeout(() => {
@@ -50,20 +52,25 @@ popupClose.onclick = function () {
 	setTimeout(() => {
 		body.classList.remove('lock-padding')
 	}, 300)
-	// headerMenu.classList.remove('opacity')
-	// setTimeout(() => {
-	// 	headerMenu.classList.remove('hidden')
-	// }, 200)
+	if (screen.width > 991) {
+		headerMenu.classList.remove('opacity')
+		setTimeout(() => {
+			headerMenu.classList.remove('hidden')
+		}, 200)
+	}
 }
 popupArea.onclick = function () {
 	setTimeout(() => {
 		body.classList.remove('lock-padding')
 	}, 300)
 	popup.classList.remove('open')
-	// headerMenu.classList.remove('opacity')
-	// setTimeout(() => {
-	// 	headerMenu.classList.remove('hidden')
-	// }, 200)
+	if (screen.width > 991) {
+		headerMenu.classList.remove('opacity')
+		setTimeout(() => {
+			headerMenu.classList.remove('hidden')
+		}, 200)
+	}
+
 }
 // formSubmission.onclick = function () {
 // 	popup.classList.remove('open')
