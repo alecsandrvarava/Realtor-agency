@@ -1382,6 +1382,7 @@ iframe {
   visibility: hidden;
   -webkit-transition: 0.3s;
   transition: 0.3s;
+  z-index: 50;
 }
 
 .popup__area {
@@ -1398,11 +1399,14 @@ iframe {
 }
 
 .popup__close {
-  font-size: 24px;
-  color: #000000;
+  font-size: 34px;
+  color: #ffffff;
   -webkit-transition: 0.1s;
   transition: 0.1s;
   padding: 10px;
+  position: absolute;
+  top: -50px;
+  right: -10px;
 }
 
 .popup__close:hover {
@@ -1428,20 +1432,282 @@ iframe {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 30px 10px;
+  padding: 30px;
+}
+
+@media (max-width: 767px) {
+  .popup__body {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+    margin-top: 100px;
+  }
 }
 
 .popup__content {
   background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 44px;
   color: #000000;
   max-width: 1100px;
-  padding: 30px;
+  padding: 50px 15px;
   position: relative;
 }
 
-.popup__close {
+@media (max-width: 767px) {
+  .popup__content {
+    padding: 25px 10px;
+  }
+}
+
+.popup__content::after {
+  content: "";
   position: absolute;
-  top: 10px;
-  right: 10px;
+  background-color: #562000;
+  border-radius: 44px;
+  width: 104%;
+  height: 110%;
+  left: -2%;
+  top: -5%;
+  z-index: -1;
+}
+
+@media (max-width: 767px) {
+  .popup__content::after {
+    width: 106%;
+    height: 106%;
+    left: -3%;
+    top: -3%;
+  }
+}
+
+.popup__form-items {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0 -10px;
+  margin-bottom: 20px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+@media (max-width: 992px) {
+  .popup__form-items {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 767px) {
+  .popup__form-items {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-bottom: 20px;
+    margin: 0px;
+    -webkit-box-align: stretch;
+        -ms-flex-align: stretch;
+            align-items: stretch;
+  }
+}
+
+.popup-items__item {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  padding: 0 10px;
+}
+
+@media (max-width: 767px) {
+  .popup-items__item {
+    -webkit-box-flex: 1;
+        -ms-flex: 1 1 100%;
+            flex: 1 1 100%;
+    margin-bottom: 20px;
+    padding: 0px;
+  }
+}
+
+.popup-items__item p {
+  font-weight: 300;
+  font-size: 22px;
+  line-height: 32px;
+  color: #000000;
+  width: 100%;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .popup-items__item p {
+    font-size: 18px;
+    line-height: 22px;
+    margin-bottom: 0px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  .popup-items__item p {
+    width: 100%;
+    font-size: 14px;
+    line-height: 22px;
+    margin-bottom: 0px;
+  }
+}
+
+.popup-items__item h3 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 58px;
+  color: #000000;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+@media (max-width: 992px) {
+  .popup-items__item h3 {
+    line-height: 50px;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 767px) {
+  .popup-items__item h3 {
+    font-size: 28px;
+    line-height: 32px;
+  }
+}
+
+.popup-items__button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popup-items__button button {
+  font-weight: 600;
+  font-size: 14.4702px;
+  line-height: 18px;
+  text-align: center;
+  color: #ffffff;
+  background: -webkit-gradient(linear, left top, right top, from(#eb9562), color-stop(148.54%, #e0cfa7));
+  background: linear-gradient(90deg, #eb9562 0%, #e0cfa7 148.54%);
+  -webkit-box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 31px;
+  padding: 20px 70px;
+}
+
+.popup-items__button button:hover {
+  -webkit-transition: 1.2s;
+  transition: 1.2s;
+  background: -webkit-gradient(linear, left top, right top, from(#b1653a), color-stop(148.54%, #a18c5c));
+  background: linear-gradient(90deg, #b1653a 0%, #a18c5c 148.54%);
+}
+
+.popup-items__button button:active {
+  background: -webkit-gradient(linear, left top, right top, from(#eb9562), color-stop(148.54%, #e0cfa7));
+  background: linear-gradient(90deg, #eb9562 0%, #e0cfa7 148.54%);
+}
+
+.popup-item__input {
+  max-width: 550px;
+  border: 1px solid rgba(0, 0, 0, 0.4);
+  margin-bottom: 10px;
+}
+
+@media (max-width: 768px) {
+  .popup-item__input {
+    max-width: 100%;
+  }
+}
+
+.popup-item__input input {
+  font-weight: 400;
+  width: 100%;
+  padding: 10px 10px;
+  color: #000000;
+  font-weight: 300;
+  font-size: 18px;
+  line-height: 22px;
+  color: #000000;
+  background-color: transparent;
+}
+
+@media (max-width: 992px) {
+  .popup-item__input input {
+    padding: 5px 5px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .popup-item__input input {
+    padding: 5px 5px;
+    font-size: 14px;
+  }
+}
+
+.popup-item__input input::-webkit-input-placeholder {
+  color: #000000;
+  font-weight: 300;
+  font-size: 21px;
+}
+
+.popup-item__input input:-ms-input-placeholder {
+  color: #000000;
+  font-weight: 300;
+  font-size: 21px;
+}
+
+.popup-item__input input::-ms-input-placeholder {
+  color: #000000;
+  font-weight: 300;
+  font-size: 21px;
+}
+
+.popup-item__input input::placeholder {
+  color: #000000;
+  font-weight: 300;
+  font-size: 21px;
+}
+
+@media (max-width: 992px) {
+  .popup-item__input input::-webkit-input-placeholder {
+    font-size: 14px;
+  }
+  .popup-item__input input:-ms-input-placeholder {
+    font-size: 14px;
+  }
+  .popup-item__input input::-ms-input-placeholder {
+    font-size: 14px;
+  }
+  .popup-item__input input::placeholder {
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  .popup-item__input input::-webkit-input-placeholder {
+    font-size: 12px;
+    line-height: 22px;
+  }
+  .popup-item__input input:-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 22px;
+  }
+  .popup-item__input input::-ms-input-placeholder {
+    font-size: 12px;
+    line-height: 22px;
+  }
+  .popup-item__input input::placeholder {
+    font-size: 12px;
+    line-height: 22px;
+  }
 }
 /*# sourceMappingURL=main.css.map */
