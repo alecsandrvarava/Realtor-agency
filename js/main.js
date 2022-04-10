@@ -37,7 +37,7 @@ menuBurger.onclick = function () {
 popupLink.onclick = function () {
 	popup.classList.add('open')
 	setTimeout(() => {
-		body.classList.remove('lock-padding')
+		body.classList.add('lock')
 	}, 200)
 	menuBurger.classList.remove('animation')
 	headerMenu.classList.add('opacity')
@@ -49,7 +49,7 @@ popupLink.onclick = function () {
 popupClose.onclick = function () {
 	popup.classList.remove('open')
 	setTimeout(() => {
-		body.classList.remove('lock-padding')
+		body.classList.remove('lock')
 	}, 200)
 	if (screen.width > 991) {
 		headerMenu.classList.remove('opacity')
@@ -60,7 +60,7 @@ popupClose.onclick = function () {
 }
 popupArea.onclick = function () {
 	setTimeout(() => {
-		body.classList.remove('lock-padding')
+		body.classList.remove('lock')
 	}, 200)
 	popup.classList.remove('open')
 	if (screen.width > 991) {
