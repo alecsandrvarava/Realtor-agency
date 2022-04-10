@@ -44,7 +44,6 @@ body {
 
 body.lock-padding {
   overflow: hidden;
-  padding-right: 17px;
 }
 
 body.lock {
@@ -1384,8 +1383,8 @@ iframe {
   left: 0;
   opacity: 0;
   visibility: hidden;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
   z-index: 50;
 }
 
