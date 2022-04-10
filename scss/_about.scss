@@ -1,0 +1,151 @@
+.about {
+}
+
+.about-home {
+	display: flex;
+	position: relative;
+	margin: 0 -15px;
+	margin-bottom: 50px;
+	@media (max-width: 992px) {
+		align-items: center;
+	}
+	@media (max-width: 767px) {
+		flex-wrap: wrap;
+		margin-bottom: 100px;
+		// flex-direction: column;
+	}
+	&__text {
+		flex: 0 0 35%;
+		padding: 0 15px;
+		@media (max-width: 767px) {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__img {
+		flex: 0 0 65%;
+		padding: 0 15px;
+		height: 440px;
+		// position: relative;
+		@media (max-width: 992px) {
+			height: 300px;
+		}
+		@media (max-width: 767px) {
+			height: 170px;
+			flex: 1 1 100%;
+			margin-bottom: 30px;
+		}
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			// position: absolute;
+			// left: 0;
+			// top: 0;
+		}
+	}
+}
+.about-button {
+	@media (max-width: 767px) {
+		position: absolute;
+		left: 50%;
+		transform: translate(-50%, 0%);
+		top: 100%;
+		// margin-top: 20px;
+	}
+}
+.about-text {
+	& p {
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 21px;
+		text-align: center;
+		color: $color-black;
+		margin-bottom: 50px;
+		@media (max-width: 992px) {
+			margin-bottom: 20px;
+		}
+		@media (max-width: 767px) {
+			display: none;
+		}
+	}
+	&__title {
+		text-align: center;
+		color: $color-black;
+		font-weight: 700;
+		font-size: 68px;
+		line-height: 100px;
+		margin-bottom: 40px;
+		@media (max-width: 992px) {
+			font-size: 46px;
+			line-height: 60px;
+			margin-bottom: 20px;
+		}
+		@media (max-width: 768px) {
+			font-size: 46px;
+			line-height: 60px;
+			margin-bottom: 15px;
+		}
+	}
+}
+.form-items {
+	&__button {
+	}
+}
+.about-plan {
+	&__title {
+		text-align: center;
+		font-weight: 700;
+		font-size: 50px;
+		line-height: 70px;
+		margin-bottom: 20px;
+		@media (max-width: 992px) {
+			font-size: 40px;
+			line-height: 60px;
+		}
+		@media (max-width: 768px) {
+			font-size: 40px;
+			line-height: 60px;
+			margin-bottom: 0px;
+		}
+	}
+	& p {
+		text-align: center;
+		font-weight: 300;
+		font-size: 18px;
+		line-height: 21px;
+		text-align: center;
+		color: $color-black;
+		margin-bottom: 15px;
+		@media (max-width: 992px) {
+			margin-bottom: 20px;
+		}
+		@media (max-width: 767px) {
+		}
+	}
+	&__img {
+		padding: 0 50px;
+		@media (max-width: 992px) {
+			padding: 0 20px;
+		}
+		@media (max-width: 767px) {
+			padding: 0 10px;
+		}
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			// position: absolute;
+			// left: 0;
+			// top: 0;
+		}
+	}
+}
+.about-company {
+	&__items {
+	}
+}
+.company-items {
+	&__item {
+	}
+}

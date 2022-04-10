@@ -87,7 +87,7 @@
 			width: 100%;
 			padding: 10px 10px;
 			color: $color-black;
-			@media (max-width: 768px) {
+			@media (max-width: 992px) {
 				font-size: 18px;
 			}
 			@media (max-width: 768px) {
@@ -109,7 +109,8 @@
 	&__button {
 		display: flex;
 		justify-content: center;
-		& button {
+		& button,
+		a {
 			font-weight: 600;
 			font-size: 14.4702px;
 			line-height: 18px;
