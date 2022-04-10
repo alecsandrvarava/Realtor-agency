@@ -22,7 +22,7 @@ menuBurger.onclick = function () {
 		setTimeout(() => {
 			headerMenu.classList.remove('hidden')
 		}, 200)
-		body.classList.add('lock-padding')
+		body.classList.add('lock')
 	} else {
 		console.log('!!')
 		this.classList.remove('animation')
@@ -30,7 +30,7 @@ menuBurger.onclick = function () {
 		setTimeout(() => {
 			headerMenu.classList.add('hidden')
 		}, 200)
-		body.classList.remove('lock-padding')
+		body.classList.remove('lock')
 	}
 }
 
