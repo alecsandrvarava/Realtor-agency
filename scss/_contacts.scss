@@ -1,0 +1,58 @@
+.contacts {
+	margin-bottom: 30px;
+}
+.apartament-text {
+	width: 100%;
+}
+.apartament-text p {
+	font-weight: 300;
+	font-size: 30px;
+	line-height: 180%;
+	color: $color-black;
+	margin-bottom: 15px;
+	@media (max-width: 992px) {
+		font-size: 24px;
+		margin-bottom: 10px;
+	}
+	@media (max-width: 767px) {
+		font-size: 16px;
+		line-height: 200%;
+		margin-bottom: 15px;
+	}
+	& a {
+		color: $color-black;
+		padding: 10px;
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+	& img {
+		transition: 0.3s;
+		padding-left: 10px;
+		height: 50px;
+		@media (max-width: 992px) {
+			height: 40px;
+		}
+		@media (max-width: 767px) {
+			// height: 20px;
+		}
+		&:hover {
+			transform: scale(1.1);
+		}
+	}
+}
+.image-iphone {
+	max-width: 300px;
+	margin: auto;
+	@media (max-width: 992px) {
+		max-width: 250px;
+	}
+	@media (max-width: 768px) {
+		display: none;
+	}
+	& img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+	}
+}

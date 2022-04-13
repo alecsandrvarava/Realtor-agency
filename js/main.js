@@ -1,7 +1,7 @@
 const hidden = document.querySelectorAll(".hidden")
 const menuBurger = document.querySelector('.menu__burger')
 const headerMenu = document.querySelector('.header-menu__list')
-const [popupLink] = document.querySelectorAll(".popup__link")
+const popupLink = document.querySelectorAll(".popup__link")
 const [popupClose] = document.querySelectorAll(".popup__close")
 const [popupArea] = document.querySelectorAll(".popup__area")
 const popup = document.querySelector('.popup')
@@ -34,23 +34,52 @@ menuBurger.onclick = function () {
 	}
 }
 
-popupLink.onclick = function () {
-	popup.classList.add('open')
-	setTimeout(() => {
-		body.classList.add('lock')
-	}, 200)
-	menuBurger.classList.remove('animation')
-	headerMenu.classList.add('opacity')
-	setTimeout(() => {
-		headerMenu.classList.add('hidden')
-	}, 200)
-	// body.classList.remove('lock')
+for (var i = 0; i < popupLink.length; i++) {
+	popupLink[i].onclick = function () {
+		if (screen.width > 991) {
+			popup.classList.add('open')
+			body.classList.add('lock')
+			menuBurger.classList.remove('animation')
+			headerMenu.classList.add('opacity')
+			setTimeout(() => {
+				headerMenu.classList.add('hidden')
+			}, 200)
+		} else {
+			popup.classList.add('open')
+			body.classList.add('lock-padding')
+			menuBurger.classList.remove('animation')
+			headerMenu.classList.add('opacity')
+			setTimeout(() => {
+				headerMenu.classList.add('hidden')
+			}, 200)
+		}
+	};
 }
+
+// popupLink.onclick = function () {
+// 	if (screen.width > 991) {
+// 		popup.classList.add('open')
+// 		body.classList.add('lock')
+// 		menuBurger.classList.remove('animation')
+// 		headerMenu.classList.add('opacity')
+// 		setTimeout(() => {
+// 			headerMenu.classList.add('hidden')
+// 		}, 200)
+// 	} else {
+// 		popup.classList.add('open')
+// 		body.classList.add('lock-padding')
+// 		menuBurger.classList.remove('animation')
+// 		headerMenu.classList.add('opacity')
+// 		setTimeout(() => {
+// 			headerMenu.classList.add('hidden')
+// 		}, 200)
+// 	}
+// }
+
 popupClose.onclick = function () {
 	popup.classList.remove('open')
-	setTimeout(() => {
-		body.classList.remove('lock')
-	}, 200)
+	body.classList.remove('lock')
+	body.classList.remove('lock-padding')
 	if (screen.width > 991) {
 		headerMenu.classList.remove('opacity')
 		setTimeout(() => {
@@ -59,9 +88,8 @@ popupClose.onclick = function () {
 	}
 }
 popupArea.onclick = function () {
-	setTimeout(() => {
-		body.classList.remove('lock')
-	}, 200)
+	body.classList.remove('lock')
+	body.classList.remove('lock-padding')
 	popup.classList.remove('open')
 	if (screen.width > 991) {
 		headerMenu.classList.remove('opacity')
