@@ -111,3 +111,19 @@ formSubmission.onclick = function () {
 		}, 200)
 	}
 }
+
+const arrow = document.querySelector('.apartments-dropdowns__arrow')
+const numder = document.querySelector('.apartments-dropdowns__list')
+const listScroll = document.querySelectorAll('.list-scroll')
+
+arrow.onclick = function () {
+	arrow.classList.toggle('active')
+	numder.classList.toggle('number')
+	body.classList.toggle('lock')
+}
+for (let i = 0; i < listScroll.length; i++) {
+	listScroll[i].onclick = function () {
+		numder.classList.toggle('scroll')
+	}
+
+}
