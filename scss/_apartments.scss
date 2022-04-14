@@ -185,3 +185,26 @@
 		justify-content: center;
 	}
 }
+.apartments-layout {
+	max-width: 1000px;
+	margin: auto;
+	&__items {
+		display: flex;
+		margin: 0 -20px;
+	}
+
+	&__img {
+		flex: 0 0 50%;
+		padding: 0 20px;
+		& img {
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+		}
+	}
+
+	&__text {
+	}
+}
+.apartments-text {
+}
