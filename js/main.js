@@ -114,16 +114,26 @@ formSubmission.onclick = function () {
 
 const arrow = document.querySelector('.apartments-dropdowns__arrow')
 const numder = document.querySelector('.apartments-dropdowns__list')
+const screenNumber = document.getElementById('list-scroll')
+const scren = document.getElementById('scren')
 const listScroll = document.querySelectorAll('.list-scroll')
 
+const getNum = function () {
+	scren.innerHTML = this.dataset.numb
+	arrow.classList.remove('active')
+	numder.classList.remove('number')
+}
+listScroll.forEach(function (itemNum) {
+	itemNum.onclick = getNum
+})
 arrow.onclick = function () {
 	arrow.classList.toggle('active')
 	numder.classList.toggle('number')
-	body.classList.toggle('lock')
+	// body.classList.toggle('lock')
 }
-for (let i = 0; i < listScroll.length; i++) {
-	listScroll[i].onclick = function () {
-		numder.classList.toggle('scroll')
-	}
 
-}
+
+
+
+
+

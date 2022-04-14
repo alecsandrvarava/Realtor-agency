@@ -2,6 +2,7 @@
 	&__items {
 		display: flex;
 		margin: 0 -15px;
+		margin-bottom: 25px;
 	}
 
 	&__img {
@@ -72,37 +73,53 @@
 }
 .apartments-dropdowns {
 	position: relative;
+	&::before {
+		content: "";
+		display: block;
+		position: absolute;
+		left: 304px;
+		top: 21px;
+		width: 1px;
+		height: 32px;
+		background-color: #00000081;
+		z-index: 1;
+	}
 	&::after {
 		content: "";
 		display: block;
 		position: absolute;
 		left: 267px;
-		top: 17px;
+		top: 12px;
 		z-index: -1;
-		width: 70px;
-		height: 42px;
+		width: 72px;
+		height: 48px;
 		background: linear-gradient(179.24deg, #eb9562 0.66%, #ffffff 155.42%);
 		border-radius: 15px;
 	}
 	&__title {
-		font-size: 30px;
+		font-size: 28px;
 		font-weight: 700;
 		border: 1px solid #8d3500;
 		box-sizing: border-box;
 		border-radius: 17px;
 		display: inline-block;
-		padding: 20px 90px 20px 20px;
+		padding: 20px 115px 20px 20px;
 	}
 
 	&__arrow {
 		transform: rotate(90deg);
 		display: inline-block;
-		font-size: 30px;
+		font-size: 32px;
 		position: absolute;
-		left: 305px;
-		top: 25px;
+		left: 311px;
+		top: 22px;
 		transition: 0.3s;
-
+		z-index: 1;
+		color: #00000081;
+		cursor: pointer;
+		&:hover {
+			color: $color-black;
+		}
 		&.active {
 			transform: rotate(-90deg);
 		}
@@ -110,22 +127,61 @@
 
 	&__item {
 		position: absolute;
-		left: 288px;
-		top: 30px;
+		left: 267px;
+		top: 12px;
+		// &::-webkit-scrollbar {
+		// 	width: 24px;
+		// 	height: 8px;
+		// 	background-color: #143861;
+		// }
 	}
 	&__list {
 		display: none;
-		overflow: auto;
 		& li {
 			font-size: 20px;
 			margin-bottom: 10px;
+			&:last-child {
+				margin-bottom: 0;
+			}
 		}
 		&.number {
 			display: block;
+			height: 200px;
+			overflow: scroll;
+			padding: 15px 37px 0 10px;
+			text-align: center;
+			width: 72px;
+			background: linear-gradient(179.24deg, #eb9562 0.66%, #ffffff 155.42%);
+			border-radius: 15px;
+			&::-webkit-scrollbar {
+				width: 0px;
+			}
 		}
 	}
 }
-.scroll {
+.scren {
 	position: absolute;
-	top: -30px;
+	left: 267px;
+	top: 12px;
+	text-align: center;
+	width: 72px;
+	height: 48px;
+	background: linear-gradient(179.24deg, #eb9562 0.66%, #ffffff 155.42%);
+	border-radius: 15px;
+	padding: 14px 28px 0px 0px;
+	font-size: 24px;
+	font-weight: 500;
+}
+.list-scroll {
+	cursor: pointer;
+	transition: 0.3s;
+	&:hover {
+		transform: scale(1.4);
+	}
+}
+.center {
+	@media (max-width: 768px) {
+		display: flex;
+		justify-content: center;
+	}
 }
