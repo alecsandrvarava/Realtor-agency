@@ -102,7 +102,7 @@ popupArea.onclick = function () {
 formSubmission.onclick = function () {
 	popup.classList.remove('open')
 	setTimeout(() => {
-		body.classList.remove('lock')
+		body.classList.remove('lock-padding')
 	}, 300)
 	if (screen.width > 991) {
 		headerMenu.classList.remove('opacity')
