@@ -2730,7 +2730,7 @@ iframe {
   width: 1px;
   height: 32px;
   background-color: #00000081;
-  z-index: 2;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {
@@ -2788,7 +2788,7 @@ iframe {
   top: 22px;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  z-index: 2;
+  z-index: 1;
   color: #00000081;
   cursor: pointer;
 }
