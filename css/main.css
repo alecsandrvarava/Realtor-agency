@@ -2666,22 +2666,24 @@ iframe {
   .apartments-btn {
     margin-top: 20px;
     position: absolute;
-    bottom: 3%;
+    bottom: 4%;
+    left: 30%;
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 704px) {
   .apartments-btn {
     margin-top: 20px;
     position: absolute;
-    bottom: 5%;
+    bottom: 6%;
   }
 }
 
-@media (max-width: 523px) {
+@media (max-width: 504px) {
   .apartments-btn {
     position: absolute;
-    bottom: 8%;
+    bottom: 9%;
+    left: 25%;
   }
 }
 
@@ -2689,6 +2691,7 @@ iframe {
   .apartments-btn {
     position: absolute;
     bottom: 10%;
+    left: 17%;
   }
 }
 
@@ -2696,6 +2699,7 @@ iframe {
   .apartments-btn {
     position: absolute;
     bottom: 12%;
+    left: 15%;
   }
 }
 
@@ -2924,7 +2928,7 @@ iframe {
 
 @media (max-width: 768px) {
   .apartments-layout__img:last-child {
-    margin-bottom: 0px;
+    margin-bottom: 10px;
   }
 }
 
