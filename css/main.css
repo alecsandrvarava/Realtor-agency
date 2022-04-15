@@ -2678,6 +2678,14 @@ iframe {
   }
 }
 
+@media (max-width: 524px) {
+  .apartments-btn {
+    position: absolute;
+    bottom: 7%;
+    left: 25%;
+  }
+}
+
 @media (max-width: 504px) {
   .apartments-btn {
     position: absolute;

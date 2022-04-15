@@ -87,6 +87,11 @@
 		position: absolute;
 		bottom: 6%;
 	}
+	@media (max-width: 524px) {
+		position: absolute;
+		bottom: 7%;
+		left: 25%;
+	}
 	@media (max-width: 504px) {
 		position: absolute;
 		bottom: 9%;
