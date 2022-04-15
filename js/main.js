@@ -101,9 +101,7 @@ popupArea.onclick = function () {
 }
 formSubmission.onclick = function () {
 	popup.classList.remove('open')
-	setTimeout(() => {
-		body.classList.remove('lock-padding')
-	}, 300)
+	body.classList.remove('lock-padding')
 	if (screen.width > 991) {
 		headerMenu.classList.remove('opacity')
 		setTimeout(() => {
@@ -126,10 +124,10 @@ const getNum = function () {
 listScroll.forEach(function (itemNum) {
 	itemNum.onclick = getNum
 })
+
 arrow.onclick = function () {
 	arrow.classList.toggle('active')
 	numder.classList.toggle('number')
-	// body.classList.toggle('lock')
 }
 
 
